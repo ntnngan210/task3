@@ -1,3 +1,8 @@
+<?php
+$username = isset( $_SESSION['fullname'])? $_SESSION['fullname']:null;
+
+?>
+
 <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
@@ -42,7 +47,7 @@
                     </a>
                     
                     <a class="btn-sm-square bg-white rounded-circle ms-3" href="./dangnhap.php">
-                        <small class="fa fa-user text-body"></small>
+                        <small class="fa fa-user text-body"></small><?php echo $username; ?>
                     </a>
                     <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
                         <small class="fa fa-shopping-bag text-body"></small>

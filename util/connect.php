@@ -82,7 +82,8 @@ class connect
        if($row>0)
        {
          $_SESSION['id_user']=$data['id_user'];
-         return 1;
+         $_SESSION['fullname']=$data['fullname'];
+         return true;
        }
        else
        {
