@@ -20,7 +20,10 @@ include('./includes/navbar.php')
 <div class="container-xxl py-5">
     <div class="container">
         <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-5 mb-3">Đăng nhập</h1>
+            <h1 class="display-5 mb-3">Đăng Ký</h1>
+            <h4 class="text-danger"><?php $error = isset($_SESSION["Error"])?$_SESSION["Error"]:null;
+                echo $error;
+            ?></h4>
         </div>
         <div class="row g-4">
             <form class="form-horizontal" method="post" action="login.php">
@@ -35,26 +38,22 @@ include('./includes/navbar.php')
                     <input required type="password" name="password" id="form2Example2" class="form-control" />
                     <label class="form-label" for="form2Example2">Password</label>
                 </div>
-
+                <div class="form-outline mb-4">
+                    <input required type="text" name="FullName" id="form2Example2" class="form-control" />
+                    <label class="form-label" for="form2Example2">Full Name</label>
+                </div>
                 <!-- 2 column grid layout for inline styling -->
                 <div class="row mb-4">
                     <div class="col d-flex justify-content-center">
                         <!-- Checkbox -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                            <label class="form-check-label" for="form2Example31"> Remember me </label>
-                        </div>
+
                     </div>
 
-                    <div class="col">
-                        <!-- Simple link -->
-                        <a href="#!">Forgot password?</a>
-                    </div>
+
                 </div>
 
                 <!-- Submit button -->
-                <input type="submit" value="login" name="login-submit"  class="btn mx-auto my-auto btn-primary btn-block mb-4">
-                <a href="dangky.php" class="btn mx-auto my-auto btn-primary btn-block mb-4">Đăng ký</a>
+                <input type="submit" value="Đăng Ký" name="register-submit"  class="btn mx-auto my-auto btn-primary btn-block mb-4">
                 <!-- Register buttons -->
 
             </form>

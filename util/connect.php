@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 class connect 
 {
     private $servername ;
@@ -87,6 +88,7 @@ class connect
        }
        else
        {
+           $_SESSION["Error"]= "Tên đăng nhập không tồn tại";
          return false;
        }
      }
